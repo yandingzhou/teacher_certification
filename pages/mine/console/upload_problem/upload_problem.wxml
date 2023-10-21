@@ -1,0 +1,28 @@
+<view>
+  <view style="margin-left: 20rpx;margin-top: 20rpx;">题库类型:{{grade}}-{{subject}}</view>
+  <van-button custom-class="choose_button" bindtap="choose_question_bank" plain type="info">切换题库</van-button>
+</view>
+
+<van-popup  show="{{ isShow }}"  position="bottom"   bind:close="cancel_choose">
+      <van-picker show-toolbar title="选择题库类型" columns="{{ columns }}" bind:change="onChange_choose" bind:confirm="confirm_choose" bind:cancel="cancel_choose" />
+</van-popup>
+
+<van-cell-group >
+  <van-field  value="{{ title }}"  label="题目" type="textarea" autosize placeholder="请输入题目"   bind:change="onChange_title"/>
+  <van-field  value="{{ A }}"  label="A"  placeholder="请输入A选项内容"   bind:change="onChange_A"/>
+  <van-field  value="{{ B }}"  label="B"  placeholder="请输入B选项内容"   bind:change="onChange_B"/>
+  <van-field  value="{{ C }}"  label="C"  placeholder="请输入C选项内容" bind:change="onChange_C"/>
+  <van-field  value="{{ D }}"  label="D"  placeholder="请输入D选项内容"   bind:change="onChange_D"/>
+    <view style="margin:20rpx">正确选项：</view>
+    <van-radio-group bind:change="onChange_correct_answer" direction="horizontal" >
+        <van-radio name="A" style="margin:20rpx">A</van-radio>
+        <van-radio name="B" style="margin:20rpx">B</van-radio>
+        <van-radio name="C" style="margin:20rpx">C</van-radio>
+        <van-radio name="D" style="margin:20rpx">D</van-radio>
+    </van-radio-group>
+
+  <van-field  value="{{ analysis }}"  label="解析" type="textarea" autosize  placeholder="请输入解析"   bind:change="onChange_analysis"/>
+</van-cell-group>
+
+<van-button custom-class="choose_button" type="primary" bindtap="upload_question" plain>上传题目</van-button>
+

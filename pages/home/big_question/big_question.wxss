@@ -1,0 +1,124 @@
+.question {
+  padding: 20px;
+}
+
+.question-content {
+  margin-bottom: 20px;
+}
+
+.question-text-container {
+  margin-bottom: 10px;
+}
+
+.question-text {
+  font-size: 16px;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+
+.indent {
+  display: inline-block;
+  width: 16px;
+}
+
+.sub-questions {
+  margin-bottom: 20px;
+}
+
+.sub-question {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.sub-question-number {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.sub-question-answer {
+  height: 40px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 4px;
+  resize: none;
+}
+
+.submit-button {
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 4px;
+  margin-top: 20rpx;
+}
+
+.analysis{
+  margin-top: 40rpx;
+}
+
+.analysis-item{
+  padding: 20rpx;
+}
+
+
+.popup{
+  padding: 30rpx;
+}
+
+.result-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-score {
+  margin-bottom: 10px;
+}
+
+.result-score-text {
+  font-size: 16px;
+  color: #333333;
+}
+
+.result-score-number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff9900;
+}
+
+.result-percentage {
+  display: flex;
+  align-items: center;
+}
+
+.result-percentage-text {
+  font-size: 16px;
+  color: #666666;
+  white-space: nowrap;
+}
+
+.result-percentage-number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #336699;
+  white-space: nowrap;
+  margin-right: 5px; /* 可调整文本之间的间距 */
+}
+
+
+.result-question {
+  margin-bottom: 5px;
+}
+
+.result-question-number {
+  font-size: 16px;
+  color: #333333;
+}
+
+.result-question-score {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0099cc;
+}

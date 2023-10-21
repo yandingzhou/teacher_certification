@@ -1,0 +1,18 @@
+<view wx:if="{{collection.length==0}}">
+  <van-empty image="error" description="暂未创建收藏夹" />
+</view>
+
+
+<view wx:for="{{collection}}" wx:key="index" wx:for-index="i" style="touch-action:none;">
+    <van-swipe-cell right-width="{{ 65 }}"> 
+        <view class="box" bind:tap="enter_collection_folder" data-i="{{i}}">
+            <image class="image" src="{{folder_img_url}}"></image>
+            <view class="info">
+                <text class="name">{{item.collection_name}}</text>
+                <text class="description">共有{{item.question_list.length}}条数据</text>
+            </view>
+        </view>
+
+        <view slot="right" class="right" bind:tap="click_delete_collection_folder" data-i="{{i}}">删除</view>
+    </van-swipe-cell>
+</view>

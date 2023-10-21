@@ -1,0 +1,23 @@
+<view>
+  <view style="margin-left: 20rpx;margin-top: 20rpx;">试卷分类:{{type}}-{{stage}}</view>
+  <van-button custom-class="choose_button" bindtap="choose_type_and_stage" plain type="info">切换分类</van-button>
+</view>
+
+<van-button custom-class="choose_button" bindtap="choose_file" plain type="primary">上传试卷</van-button>
+
+<!-- 试卷类型选择 -->
+<van-popup  show="{{ isShow }}"  position="bottom"   bind:close="cancel_choose">
+      <van-picker show-toolbar title="选择试卷类型" columns="{{ columns }}" bind:change="onChange_choose" bind:confirm="confirm_choose" bind:cancel="cancel_choose" />
+</van-popup>
+
+<!-- 是否继续上传文件 -->
+<van-popup show="{{ isShow2 }}" bind:close="onClose_is_uploadFile">
+    <view style="padding: 30rpx;">
+        <view style="color: #666666;">文件名:</view>
+        <van-field value="{{ fileName }}" bind:change="onChange_test_paper_name" class="custom-label" />
+        <view style="display: flex;justify-content: space-between;">
+            <van-button plain type="info" bind:tap="preview">预览</van-button>
+            <van-button plain type="primary" bind:tap="uploadFile">上传</van-button>
+        </view>
+    </view>
+</van-popup>

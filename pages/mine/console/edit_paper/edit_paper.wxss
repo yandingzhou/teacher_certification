@@ -1,0 +1,10 @@
+.choose_button{
+    width: 50%;
+    left:25%;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+  }
+  .custom-label .van-field__label {
+    padding: 0; 
+    margin: 0;
+  }

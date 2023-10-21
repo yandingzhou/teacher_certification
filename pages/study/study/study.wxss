@@ -1,0 +1,20 @@
+.gear {
+    height: 120rpx;
+    width: 120rpx;
+    position: absolute;
+    bottom: 80rpx;
+    right: 60rpx;
+    z-index: 999;
+  }
+   
+  .num {
+    height: 80rpx;
+    width: 80rpx;
+    position: absolute;
+    bottom: 100rpx;
+    right: 80rpx;
+    opacity: 0;
+    z-index: 999
+  }
+  
+  

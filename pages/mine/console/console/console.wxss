@@ -1,0 +1,21 @@
+  .rectangle {
+    display: flex;
+    position: relative;
+    padding: 20rpx;
+    width: 70%;
+    margin: 50rpx;
+    left: 5%;
+    border-radius: 10rpx;
+    border: 5rpx solid #efefef;
+  }
+  
+  .owl{
+      width: 200rpx;
+      height: 200rpx;
+  }
+  .operate{
+      position: absolute;
+      right: 50rpx;
+      top: 50rpx;
+      color: grey;
+  }

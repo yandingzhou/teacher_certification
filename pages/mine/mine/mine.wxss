@@ -1,0 +1,39 @@
+.user_image{
+  width: 185rpx;
+  height:185rpx;
+  border-radius:50%;
+  display: flex;
+  overflow:hidden;
+  border: 5rpx solid black;
+  position:absolute;
+  left:20rpx;
+  top:200rpx;
+}
+.background
+{
+  height: 400rpx;
+  width: 100%;
+  border-radius: 20rpx;
+}
+
+.user_name
+{
+  position:absolute;
+  left:250rpx;
+  top:220rpx;
+  font-size: large;
+}
+.my_items
+{
+  margin-bottom: 30rpx;
+}
+
+.choose_login
+{
+  position: absolute;
+  top: 180rpx;
+  left: 35%;
+}
+.check_color{
+  color:green
+}

@@ -1,0 +1,52 @@
+<van-tabs animated swipeable sticky>
+    <van-tab title="总数">
+        <view style="height:100vh">
+            <scroll-view class="list" style="height: 90%;" scroll-y="true" bindscrolltolower="loadMoreData_1">
+                <view wx:for="{{ranking_list_sum}}" wx:for-index="i" wx:key="_id" style="display: flex;padding: 20rpx;border: #efefef 2rpx solid;position: relative">
+                    <image wx:if="{{i==0}}" src="cloud://cloud-6gk5axmmcb35f6bf.636c-cloud-6gk5axmmcb35f6bf-1308548612/金牌.png" mode="aspectFill" style="width: 100rpx; height: 100rpx;margin-top: 10rpx;"/>
+                    <image wx:elif="{{i==1}}" src="cloud://cloud-6gk5axmmcb35f6bf.636c-cloud-6gk5axmmcb35f6bf-1308548612/银牌.png" mode="aspectFill" style="width: 100rpx; height: 100rpx;margin-top: 10rpx;"/>
+                    <image wx:elif="{{i==2}}" src="cloud://cloud-6gk5axmmcb35f6bf.636c-cloud-6gk5axmmcb35f6bf-1308548612/铜牌.png" mode="aspectFill" style="width: 100rpx; height: 100rpx;margin-top: 10rpx;"/>
+                    <view wx:else style="margin: 40rpx;">{{i+1}}</view>
+
+                    <image src="{{item.avatarUrl}}" class="image"/>
+                    <view style="margin: 15rpx;">{{item.nickName}}</view>
+                    <view style="position: absolute; right: 30rpx;margin: 40rpx;">{{item.done_sum}}</view>
+                </view>
+            </scroll-view>
+        </view>
+
+        <view style="display: flex;padding: 20rpx;background-color: #efefef ;position: fixed;bottom: 0;width: 100%;">
+            <view wx:if="{{ranking_1}}" style="margin: 40rpx;">{{ranking_1+1}}</view>
+            <view wx:else style="margin: 40rpx;">无</view>
+            <image src="{{userInfo.avatarUrl}}" class="image"/>
+            <view style="margin: 15rpx;">{{userInfo.nickName}}</view>
+            <view style="position: absolute;right: 70rpx;margin: 40rpx;">{{my_done_sum}}</view>
+        </view>
+    </van-tab>
+
+
+  <van-tab title="正确率">
+    <view style="height:100vh">
+            <scroll-view class="list" style="height: 90%;" scroll-y="true" bindscrolltolower="loadMoreData_2">
+                <view wx:for="{{ranking_list_accuracy}}" wx:for-index="i" wx:key="_id" style="display: flex;padding: 20rpx;border: #efefef 2rpx solid;position: relative">
+                    <image wx:if="{{i==0}}" src="cloud://cloud-6gk5axmmcb35f6bf.636c-cloud-6gk5axmmcb35f6bf-1308548612/金牌.png" mode="aspectFill" style="width: 100rpx; height: 100rpx;margin-top: 10rpx;"/>
+                    <image wx:elif="{{i==1}}" src="cloud://cloud-6gk5axmmcb35f6bf.636c-cloud-6gk5axmmcb35f6bf-1308548612/银牌.png" mode="aspectFill" style="width: 100rpx; height: 100rpx;margin-top: 10rpx;"/>
+                    <image wx:elif="{{i==2}}" src="cloud://cloud-6gk5axmmcb35f6bf.636c-cloud-6gk5axmmcb35f6bf-1308548612/铜牌.png" mode="aspectFill" style="width: 100rpx; height: 100rpx;margin-top: 10rpx;"/>
+                    <view wx:else style="margin: 40rpx;">{{i+1}}</view>
+
+                    <image src="{{item.avatarUrl}}" class="image"/>
+                    <view style="margin: 15rpx;">{{item.nickName}}</view>
+                    <view style="position: absolute; right: 30rpx;margin: 40rpx;">{{item.accuracy}}%</view>
+                </view>
+            </scroll-view>
+        </view>
+
+        <view style="display: flex;padding: 20rpx;background-color: #efefef ;position: fixed;bottom: 0;width: 100%;">
+            <view wx:if="{{ranking_2}}" style="margin: 40rpx;">{{ranking_2+1}}</view>
+            <view wx:else style="margin: 40rpx;">无</view>
+            <image src="{{userInfo.avatarUrl}}" class="image"/>
+            <view style="margin: 15rpx;">{{userInfo.nickName}}</view>
+            <view style="position: absolute;right: 70rpx;margin: 40rpx;">{{my_accuracy}}%</view>
+        </view>
+  </van-tab>
+</van-tabs>

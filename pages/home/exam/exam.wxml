@@ -1,0 +1,39 @@
+<van-tabs animated swipeable>
+  <van-tab title="幼儿">
+    <view class="card-list">
+      <view wx:for="{{test_paper_info[0].all_test_papers}}" wx:key="_id" class="card" bind:tap="preview_pdf" data-test_papers_url="{{item.test_papers_url}}">
+          <view class="card-name">{{item.test_papers_name}}</view>
+          <view class="card-date">{{item.upload_time}}</view>
+      </view>
+    </view>
+  </van-tab>
+
+  <van-tab title="小学">
+    <view class="card-list">
+      <view wx:for="{{test_paper_info[1].all_test_papers}}" wx:key="_id" class="card" bind:tap="preview_pdf" data-test_papers_url="{{item.test_papers_url}}">
+          <view class="card-name">{{item.test_papers_name}}</view>
+          <view class="card-date">{{item.upload_time}}</view>
+      </view>
+    </view>
+  </van-tab>
+
+  <van-tab title="初中">
+    <view class="card-list">
+      <view wx:for="{{test_paper_info[2].all_test_papers}}" wx:key="_id" class="card" bind:tap="preview_pdf" data-test_papers_url="{{item.test_papers_url}}">
+          <view class="card-name">{{item.test_papers_name}}</view>
+          <view class="card-date">{{item.upload_time}}</view>
+      </view>
+    </view>
+  </van-tab>
+
+  <van-tab title="高中">
+    <view class="card-list">
+      <view wx:for="{{test_paper_info[3].all_test_papers}}" wx:key="_id" class="card" bind:tap="preview_pdf" data-test_papers_url="{{item.test_papers_url}}">
+          <view class="card-name">{{item.test_papers_name}}</view>
+          <view class="card-date">{{item.upload_time}}</view>
+      </view>
+    </view>
+  </van-tab>
+
+
+</van-tabs>

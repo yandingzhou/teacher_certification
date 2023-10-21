@@ -1,0 +1,10 @@
+
+<van-collapse value="{{ activeNames }}" bind:change="onChange" class="about_us">
+  <van-collapse-item title="关于我们" name="1">
+    我们来自江苏师范大学，这是我们的大创项目。
+  </van-collapse-item>
+</van-collapse>
+
+<view wx:if="{{status=='login'}}">
+  <button class="log_out" bindtap="log_out">退出登录</button>
+</view>

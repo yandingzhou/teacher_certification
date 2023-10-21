@@ -1,0 +1,31 @@
+<image src="https://bpic.588ku.com/back_pic/05/94/94/195d3fc773ed9d6.jpg" class="background"></image>
+
+<view wx:if="{{is_administrator}}" style="z-index: 9999;position: absolute;top:30rpx;left:30rpx;color: green;">管理员</view>
+
+<view wx:if="{{status=='not_login'}}">
+  <van-button round type="info" class="choose_login" bindtap="login">立即登录</van-button>
+</view>
+
+<view wx:if="{{status=='login'}}">
+  <image  src="{{userInfo.avatarUrl}}" class="user_image"></image>
+  <view class='user_name'>{{userInfo.nickName}}</view>
+
+</view>
+
+<view class="my_items">
+  <van-cell  is-link  title="控制台"  link-type="navigateTo" icon="manager-o" url="/pages/mine/console/console/console" title-class="check_color" />
+</view>
+
+<view class="my_items">
+  <van-cell is-link title="天梯排行" bindtap="judge_1" link-type="navigateTo" icon="chart-trending-o" />
+</view>
+
+<view class="my_items">
+  <van-cell is-link title="我的收藏" bindtap="judge_2" link-type="navigateTo" icon="goods-collect-o"  />
+</view>
+
+<view class="my_items">
+  <van-cell is-link  title="联系我们"  link-type="navigateTo" icon="phone-o" bindtap="contact_us"/>
+  <van-cell is-link  title="设置"  link-type="navigateTo" icon="setting-o" url="/pages/mine/setting/setting"/>
+</view>
+

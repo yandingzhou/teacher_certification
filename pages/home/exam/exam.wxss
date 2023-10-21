@@ -1,0 +1,26 @@
+/* index.wxss */
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 100%;
+  height: 30px;
+  padding: 30rpx;
+  margin: 10rpx;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-name {
+  font-size: 14px;
+}
+
+.card-date {
+  font-size: 12px;
+  text-align: right;
+  color: #888888;
+}

@@ -1,0 +1,11 @@
+<view wx:if="{{question_list.question_list.length==0}}">
+  <van-empty image="error" description="暂未收藏题目" />
+</view>
+
+
+<scroll-view class="list"  scroll-y="true">
+    <van-swipe-cell wx:for="{{question_list.question_list}}" wx:for-index="i" wx:key="_id" class="box" right-width="{{ 30 }}" style="touch-action:none;"> 
+        <view class="title" bind:tap="enter_question" data-i="{{i}}">　   {{item.title}}</view>
+        <van-icon slot="right" name="close" size='60rpx' style="margin-top: 20rpx;" bind:tap="click_cancel_collect" data-i="{{i}}"/>
+    </van-swipe-cell> 
+</scroll-view>

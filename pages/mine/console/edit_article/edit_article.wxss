@@ -1,0 +1,27 @@
+
+
+.choose_button{
+    width: 50%;
+    left:25%;
+    margin-top: 50rpx;
+    margin-bottom: 20rpx;
+  }
+
+  .box {
+    display: flex;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+
+  .right{
+    background-color: red;
+    height: inherit;
+    width: 65px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

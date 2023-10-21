@@ -1,0 +1,79 @@
+{
+  "cloud": true,
+  "pages": [
+    "pages/home/home/home",
+    "pages/home/simulation/simulation",
+    "pages/home/exam/exam",
+    "pages/home/big_question/big_question",
+    "pages/home/web_view/web_view",
+
+    "pages/study/study/study",
+    "pages/study/solve_question/solve_question",
+
+    "pages/mine/ranking/ranking",
+    "pages/mine/setting/setting",
+    "pages/mine/mine/mine",
+
+    "pages/mine/console/console/console",
+    "pages/mine/console/upload_problem/upload_problem",
+    "pages/mine/console/edit_paper/edit_paper",
+    "pages/mine/console/edit_article/edit_article",
+    "pages/mine/console/edit_answer/edit_answer",
+
+    "pages/mine/collection/collection_sort",
+    "pages/mine/collection/collection",
+    "pages/mine/collection/collection_answer"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "教资考试过关宝典",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home/home",
+        "iconPath": "/images/home.png",
+        "selectedIconPath": "/images/home_active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/study/study/study",
+        "iconPath": "/images/study.png",
+        "selectedIconPath": "/images/study_active.png",
+        "text": "学习"
+      },
+      {
+        "pagePath": "pages/mine/mine/mine",
+        "iconPath": "/images/mine.png",
+        "selectedIconPath": "/images/mine_active.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "card": "/components/card/card",
+    "van-field": "@vant/weapp/field/index",
+    "van-collapse": "@vant/weapp/collapse/index",
+    "van-collapse-item": "@vant/weapp/collapse-item/index",
+    "van-slider": "@vant/weapp/slider/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-picker": "@vant/weapp/picker/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-progress": "@vant/weapp/progress/index",
+    "van-empty": "@vant/weapp/empty/index",
+    "van-sticky": "@vant/weapp/sticky/index",
+    "van-radio": "@vant/weapp/radio/index",
+    "van-radio-group": "@vant/weapp/radio-group/index",
+    "van-swipe-cell": "@vant/weapp/swipe-cell/index"
+  }
+}

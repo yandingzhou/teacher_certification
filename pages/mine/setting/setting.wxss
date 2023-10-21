@@ -1,0 +1,17 @@
+
+.about_us
+{
+  position: absolute;
+  top: 50rpx;
+  width: 100%;
+}
+.log_out
+{
+  position: absolute;
+  top:300rpx;
+  left: 5%;
+  width: 90%;
+  color:rgb(214, 19, 19);
+  background-color: rgb(255, 255, 255);
+
+}

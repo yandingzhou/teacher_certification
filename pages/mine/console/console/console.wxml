@@ -1,0 +1,22 @@
+<navigator class="rectangle" url="/pages/mine/console/upload_problem/upload_problem">
+    <image src="cloud://cloud-6gk5axmmcb35f6bf.636c-cloud-6gk5axmmcb35f6bf-1308548612/owl_1.png" mode="aspectFill" class="owl"/>
+    <view class="operate">题目上传</view>
+</navigator>
+
+<navigator class="rectangle" url="/pages/mine/console/edit_paper/edit_paper">
+    <image src="cloud://cloud-6gk5axmmcb35f6bf.636c-cloud-6gk5axmmcb35f6bf-1308548612/owl_2.png" mode="aspectFill" class="owl"/>
+    <view class="operate">试卷上传</view>
+</navigator>
+
+<navigator class="rectangle" url="/pages/mine/console/edit_article/edit_article">
+    <image src="cloud://cloud-6gk5axmmcb35f6bf.636c-cloud-6gk5axmmcb35f6bf-1308548612/owl_3.png" mode="aspectFill" class="owl"/>
+    <view class="operate">资讯编辑</view>
+</navigator>
+
+<navigator class="rectangle" url="/pages/mine/console/edit_answer/edit_answer">
+    <image src="cloud://cloud-6gk5axmmcb35f6bf.636c-cloud-6gk5axmmcb35f6bf-1308548612/owl_4.png" mode="aspectFill" class="owl"/>
+    <view class="operate">问答编辑</view>
+</navigator>
+
+
+

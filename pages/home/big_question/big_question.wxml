@@ -1,0 +1,48 @@
+<view class="question">
+  <view class="question-content">
+    <view class="question-text-container">
+      <text class="question-text"  decode=" {{true}}">
+        <text class="indent"></text>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{big_question.title}}
+      </text>
+    </view>
+  </view>
+  <view class="sub-questions">
+    <view class="sub-question" wx:for="{{big_question.reference}}"  wx:key="index" >
+      <text class="sub-question-number">{{index+1}}.</text>
+      <textarea class="sub-question-answer" placeholder="请输入答案" bindinput="handleAnswerInput" auto-height data-i="{{index}}"></textarea>
+    </view>
+  </view>
+  <button wx:if="{{!is_submit}}" class="submit-button" bind:tap="handleSubmit">提交</button>
+  <view wx:else>
+    <button class="submit-button" bind:tap="get_analysis">查看解析</button>
+    <button class="submit-button" bind:tap="next_quetsion">下一题</button>
+  </view>
+  
+
+  <view class="analysis" wx:if="{{is_show_analysis}}">
+    <view class="analysis-item" wx:for="{{big_question.analysis}}" wx:key="$index">
+      （{{index+1}}）：{{item}}
+    </view>
+  </view>
+</view>
+
+
+
+<van-popup show="{{ show_popup }}" bind:close="onClose_popup" custom-class="popup">
+  <view class="result-container">
+    <view class="result-score">
+      <text class="result-score-text">综合得分：</text>
+      <text class="result-score-number">{{ average_score*100 }}</text>
+    </view>
+    <view class="result-percentage">
+      <text class="result-percentage-text">超过了</text>
+      <text class="result-percentage-number">{{ ranking}}%</text>
+      <text class="result-percentage-text">的人</text>
+    </view>
+    <view wx:for="{{ scores }}" wx:key="index" class="result-question">
+      <text class="result-question-number">第{{ index + 1 }}小问得分：</text>
+      <text class="result-question-score">{{ item*100 }}</text>
+    </view>
+  </view>
+</van-popup>

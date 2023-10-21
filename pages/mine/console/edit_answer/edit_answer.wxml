@@ -1,0 +1,26 @@
+<van-tabs animated swipeable>
+  <van-tab title="上传问答">
+    <van-cell-group class="input">
+        <van-field value="{{title}}" label="标题"  placeholder="请输入文章标题"   bind:change="onChange_title"/>
+        <van-field value="{{url}}" label="链接"  placeholder="请输入文章链接"   bind:change="onChange_url"/>
+    </van-cell-group>
+
+    <van-button custom-class="choose_button" type="primary" bindtap="upload_article" plain>上传问答</van-button>
+  </van-tab>
+
+
+
+
+  <van-tab title="删除问答">
+    <view wx:for="{{article_list}}" wx:key="index" wx:for-index="i" style="touch-action:none;">
+        <van-swipe-cell right-width="{{ 65 }}"> 
+            <view class="box" bind:tap="enter_article" data-url="{{item.url}}">
+                {{item.title}}
+            </view>
+
+            <view slot="right" class="right" bind:tap="click_delete_article" data-_id="{{item._id}}">删除</view>
+        </van-swipe-cell>
+    </view>
+  </van-tab>
+
+</van-tabs>

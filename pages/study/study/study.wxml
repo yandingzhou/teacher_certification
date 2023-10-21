@@ -1,0 +1,91 @@
+<van-tabs swipeable animated>
+
+  <van-tab title="幼儿">
+    <card info="综合素质"   db_name="infant_quality"></card>
+    <card info="保教知识与能力"   db_name="infant_ability"></card>
+  </van-tab>
+
+  <van-tab title="小学">
+    <card info="综合素质"   db_name="primary_quality"></card>
+    <card info="教育知识与能力"   db_name="primary_ability"></card>
+  </van-tab>
+
+  <van-tab title="初中">
+    <van-tabs animated>
+      <van-tab title="语文">
+        <card info="综合素质"   db_name="secondary_quality"></card>
+        <card info="教育知识与能力"   db_name="secondary_ability"></card>
+        <card info="语文学科知识与能力"   db_name="junior_chin"></card>
+      </van-tab>
+      <van-tab title="数学">
+        <card info="综合素质"   db_name="secondary_quality"></card>
+        <card info="教育知识与能力"   db_name="secondary_ability"></card>
+        <card info="数学学科知识与能力"   db_name="junior_math"></card>
+      </van-tab>
+      <van-tab title="英语">
+        <card info="综合素质"   db_name="secondary_quality"></card>
+        <card info="教育知识与能力"   db_name="secondary_ability"></card>
+        <card info="英语学科知识与能力"   db_name="junior_eng"></card>
+      </van-tab>
+      <van-tab title="物理">
+        <card info="综合素质"   db_name="secondary_quality"></card>
+        <card info="教育知识与能力"   db_name="secondary_ability"></card>
+        <card info="物理学科知识与能力"   db_name="junior_phy"></card>
+      </van-tab>
+      <van-tab title="化学">
+        <card info="综合素质"   db_name="secondary_quality"></card>
+        <card info="教育知识与能力"   db_name="secondary_ability"></card>
+        <card info="化学学科知识与能力"   db_name="junior_chem"></card>
+      </van-tab>
+      <van-tab title="生物">
+        <card info="综合素质"   db_name="secondary_quality"></card>
+        <card info="教育知识与能力"   db_name="secondary_ability"></card>
+        <card info="生物学科知识与能力"   db_name="junior_bio"></card>
+      </van-tab>
+    </van-tabs>
+  </van-tab>
+
+  <van-tab title="高中">
+    <van-tabs animated>
+      <van-tab title="语文">
+        <card info="综合素质"   db_name="secondary_quality"></card>
+        <card info="教育知识与能力"   db_name="secondary_ability"></card>
+        <card info="语文学科知识与能力"   db_name="senior_chin"></card>
+      </van-tab>
+      <van-tab title="数学">
+        <card info="综合素质"   db_name="secondary_quality"></card>
+        <card info="教育知识与能力"   db_name="secondary_ability"></card>
+        <card info="数学学科知识与能力"   db_name="senior_math"></card>
+      </van-tab>
+      <van-tab title="英语">
+        <card info="综合素质"   db_name="secondary_quality"></card>
+        <card info="教育知识与能力"   db_name="secondary_ability"></card>
+        <card info="英语学科知识与能力"   db_name="senior_eng"></card>
+      </van-tab>
+      <van-tab title="物理">
+        <card info="综合素质"   db_name="secondary_quality"></card>
+        <card info="教育知识与能力"   db_name="secondary_ability"></card>
+        <card info="物理学科知识与能力"   db_name="senior_phy"></card>
+      </van-tab>
+      <van-tab title="化学">
+        <card info="综合素质"   db_name="secondary_quality"></card>
+        <card info="教育知识与能力"   db_name="secondary_ability"></card>
+        <card info="化学学科知识与能力"   db_name="senior_chem"></card>
+      </van-tab>
+      <van-tab title="生物">
+        <card info="综合素质"   db_name="secondary_quality"></card>
+        <card info="教育知识与能力"   db_name="secondary_ability"></card>
+        <card info="生物学科知识与能力"   db_name="senior_bio"></card>
+      </van-tab>
+    </van-tabs>
+  </van-tab>
+</van-tabs>
+
+
+<view>
+  <image src="cloud://cloud-6gk5axmmcb35f6bf.636c-cloud-6gk5axmmcb35f6bf-1308548612/数字20.png" class="num" animation="{{anim20}}" bindtap="change_question_sum" data-question_sum='20'></image>
+  <image src="cloud://cloud-6gk5axmmcb35f6bf.636c-cloud-6gk5axmmcb35f6bf-1308548612/数字10.png" class="num" animation="{{anim10}}" bindtap="change_question_sum" data-question_sum='10' ></image>
+  <image src="cloud://cloud-6gk5axmmcb35f6bf.636c-cloud-6gk5axmmcb35f6bf-1308548612/数字5.png" class="num" animation="{{anim5}}" bindtap="change_question_sum" data-question_sum='5'></image>
+  <image src="cloud://cloud-6gk5axmmcb35f6bf.636c-cloud-6gk5axmmcb35f6bf-1308548612/gear.png" class="gear" animation="{{anim_setting}}" bindtap="setting"></image>
+  <view style="position: absolute;bottom: 40rpx;right: 30rpx;font-size: small;color:darkgrey;">当前每组题量:{{question_sum}}</view>
+</view>

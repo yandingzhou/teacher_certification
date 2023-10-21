@@ -1,0 +1,81 @@
+<view class="banner">
+   <swiper indicator-dots indicator-color="black"
+   indicator-active-color="white" circular autoplay interval="5000">
+   <swiper-item>
+     <image src="cloud://cloud-6gk5axmmcb35f6bf.636c-cloud-6gk5axmmcb35f6bf-1308548612/swiper_1.jpg">
+     </image>
+   </swiper-item>
+   <swiper-item>
+      <image src="cloud://cloud-6gk5axmmcb35f6bf.636c-cloud-6gk5axmmcb35f6bf-1308548612/swiper_2.jpg">
+      </image>
+   </swiper-item>
+   <swiper-item>
+      <image src="cloud://cloud-6gk5axmmcb35f6bf.636c-cloud-6gk5axmmcb35f6bf-1308548612/swiper_3.jpg">
+      </image>
+   </swiper-item>
+   </swiper>
+</view>
+
+<view class="options">
+  <navigator class="option" url="/pages/home/simulation/simulation">
+    <image src="cloud://cloud-6gk5axmmcb35f6bf.636c-cloud-6gk5axmmcb35f6bf-1308548612/53958.gif" class="image_1"></image>
+    <view>模拟试卷</view>
+  </navigator>
+
+  <navigator class="option" url="/pages/home/exam/exam">
+    <image src="cloud://cloud-6gk5axmmcb35f6bf.636c-cloud-6gk5axmmcb35f6bf-1308548612/86989.gif" class="image_2"></image>
+    <view>历年真题</view>
+  </navigator>
+
+  <view class="option">
+    <view bind:tap="go_to_big_question">
+      <image src="cloud://cloud-6gk5axmmcb35f6bf.636c-cloud-6gk5axmmcb35f6bf-1308548612/51277.gif" class="image_3"/>
+    </view>
+    <view>
+      综合大题
+      <image src="cloud://cloud-6gk5axmmcb35f6bf.636c-cloud-6gk5axmmcb35f6bf-1308548612/切换.png" mode="aspectFill" style="height: 20rpx;width: 50rpx;" bind:tap="choose_question_bank"/>
+    </view>
+  </view>
+</view>
+
+<van-popup  show="{{ isShow }}"  position="bottom"   bind:close="cancel_choose">
+      <van-picker show-toolbar title="选择题库类型" columns="{{ columns }}" bind:change="onChange_choose" bind:confirm="confirm_choose" bind:cancel="cancel_choose" />
+</van-popup>
+
+<view >
+    <view style="display: flex;">
+        <image src="cloud://cloud-6gk5axmmcb35f6bf.636c-cloud-6gk5axmmcb35f6bf-1308548612/new.png" mode="aspectFill" style="height: 50rpx;width: 100rpx;margin: 20rpx;"/>
+        <view style="font-size: 30rpx;margin-top: 30rpx;color: #686666;">最新资讯:</view>
+    </view>
+
+    <scroll-view scroll-y style="height: 30vh; border:2px solid #efefef;">
+        <view wx:for="{{article}}" wx:key="_id">
+            <view  bind:tap="to_read_article" data-article_url="{{item.url}}" style="padding:30rpx;margin:5rpx;border: 1px solid #efefef;">{{item.title}}</view>
+        </view>
+    </scroll-view>
+</view>
+
+<view style="  width: 100%;height: 1px;background-color: #494646; margin-top: 30rpx;margin-bottom: 30rpx;"></view>
+
+<view style="padding-bottom:30rpx ;">
+    <view style="display: flex;">
+        <image src="cloud://cloud-6gk5axmmcb35f6bf.636c-cloud-6gk5axmmcb35f6bf-1308548612/fire.png" mode="aspectFill" style="height: 50rpx;width: 50rpx;margin: 20rpx;"/>
+        <view style="font-size: 30rpx;margin-top: 30rpx;color: #686666;">热门问答:</view>
+    </view>
+
+    <scroll-view scroll-y style="height: 30vh; border:2px solid #efefef;">
+        <view wx:for="{{questions_and_answers}}" wx:key="_id">
+            <view  bind:tap="to_read_article" data-article_url="{{item.url}}" style="padding:30rpx;margin:5rpx;border: 1px solid #efefef;">{{item.title}}</view>
+        </view>
+    </scroll-view>
+    
+</view>
+
+
+
+
+
+
+
+
+

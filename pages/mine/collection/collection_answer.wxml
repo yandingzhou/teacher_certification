@@ -1,0 +1,32 @@
+<view wx:if="{{question.length==0}}">
+  <van-empty image="error" description="暂未收藏题目" />
+</view>
+
+
+<image class="bg"  src="cloud://cloud-6gk5axmmcb35f6bf.636c-cloud-6gk5axmmcb35f6bf-1308548612/bg.jpg"></image>
+
+<navigator class="back" open-type="navigateBack"> {{'<'}} 返回 </navigator>
+
+
+<swiper style="height: 100vh; width:100%" current="{{current_page_id}}" bindchange="get_current_page_id">
+<swiper-item wx:for="{{question}}" wx:for-index="i" wx:key="_id">
+  <view class="card">
+    <text class="question_title" decode="true">&ensp;&ensp;&ensp;&ensp;{{question[i].title}}</text>
+
+    <view class="{{question_status[i]['options_color'][0]}}" bindtap="choose" data-i="{{i}}" data-choice="{{0}}">A:{{question[i].A}}</view>
+    <view class="{{question_status[i]['options_color'][1]}}" bindtap="choose" data-i="{{i}}" data-choice="{{1}}">B:{{question[i].B}}</view>
+    <view class="{{question_status[i]['options_color'][2]}}" bindtap="choose" data-i="{{i}}" data-choice="{{2}}">C:{{question[i].C}}</view>
+    <view class="{{question_status[i]['options_color'][3]}}" bindtap="choose" data-i="{{i}}" data-choice="{{3}}">D:{{question[i].D}}</view>
+
+  </view>
+
+  <view class="operation">
+    <van-button plain  color="#DEB887"  bindtap="get_analysis" data-i="{{i}}">查看解析</van-button>
+    <van-button plain icon="star" color="#DEB887"  bindtap="click_cancel_collect" data-i="{{i}}">收藏</van-button>
+    <van-button plain  color="#DEB887"  bindtap="confirm_choose" data-i="{{i}}">确认选择</van-button>
+  </view>
+
+  <view wx:if="{{question_status[i]['is_analysis']==true}}" style="text-indent:2em;margin: 30rpx;">{{question[i].analysis}}</view>
+  
+</swiper-item>
+</swiper>
